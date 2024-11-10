@@ -1,7 +1,5 @@
 # SkillMitra - Interview-Preparation with AI
 
-# Skill Mitra - Mock Interview Preparation Platform
-
 Skill Mitra is an AI-powered application designed to help users prepare for interviews by offering real-time feedback, dynamic question generation, and a personalized, interactive experience. Using advanced NLP models, Skill Mitra provides a comprehensive interview practice environment that caters to various roles and experience levels.
 
 ## Features
