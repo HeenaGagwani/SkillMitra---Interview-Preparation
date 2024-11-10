@@ -1,0 +1,48 @@
+<!-- app/templates/animation.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to Skill Mitra</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.7.6/build/player/lottie.min.js"></script>
+</head>
+<body>
+    <div class="container text-center" style="padding-top: 50px;">
+        <h1>Welcome to Skill Mitra!</h1>
+<!--        <p>Your journey to mastering interviews begins here.</p>-->
+        <div id="lottie-animation" style="margin: auto; width: 300px; height: 300px;"></div>
+<!--        <button id="download-btn" class="btn btn-primary mt-3">Download</button>-->
+    </div>
+
+    <script>
+        // Load the Lottie animation
+        var animationData = {{ lottie_hello | tojson | safe }};
+        var animation = lottie.loadAnimation({
+            container: document.getElementById('lottie-animation'), // the DOM element
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            animationData: animationData // the animation data
+        });
+
+        // Redirect to home page after animation is done (2 seconds)
+        setTimeout(function() {
+            window.location.href = '/home'; // Redirect to home page
+        }, 2000); // Redirect after 2 seconds
+
+        // Handle the download button click
+        document.getElementById('download-btn').addEventListener('click', function() {
+            this.disabled = true;
+            // Simulate a download process
+            setTimeout(function() {
+                alert('Download Complete!');
+                window.location.href = '/home'; // Redirect to home page after download
+            }, 5000); // Simulating a delay for the download
+        });
+    </script>
+</body>
+</html>

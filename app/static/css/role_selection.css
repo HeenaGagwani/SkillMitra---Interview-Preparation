@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(./img2.jpg);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    padding: 0;
+}
+
+.role-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgb(26, 88, 26), whitesmoke);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+h2 {
+    color: #dfe6ed;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.custom-dropdown {
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #e6f5e6; /* Light green shade for dropdown */
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    appearance: none; /* Remove default dropdown arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><polygon points="0,0 5,10 10,0" fill="%2396c93c"/></svg>'); /* Custom dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px; /* Adjust size of the arrow */
+}
+
+.custom-dropdown:hover {
+    background-color: #d4af37; /* Goldenish background color on hover */
+    color: white; /* Change text color to white for better contrast */
+}
+
+.custom-dropdown:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 2px rgba(214, 175, 55, 0.5); /* Add custom focus shadow */
+}
+
+.btn-success {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    width: 50%; /* Button width */
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.form-group {
+    text-align: center;
+    width: 100%; /* Full width for dropdown container */
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

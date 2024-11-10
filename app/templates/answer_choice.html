@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Answer Method</title>
+     <link rel="icon" href="{{ url_for('static', filename='logo.jpg') }}" type="image/jpg">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/answer_choice.css') }}">
+</head>
+<body>
+    <div class="container-1">
+        <div class="container">
+            <h1>How would you like to answer the questions?</h1>
+            <div class="form-group">
+                <select class="custom-dropdown" id="answerMethod">
+                    <option value="text">Answer by Typing</option>
+                    <option value="voice">Answer by Speaking</option>
+                </select>
+            </div>
+            <button class="btn btn-success" onclick="proceed()">Proceed</button>
+        </div>
+    </div>
+
+    <script>
+        function proceed() {
+            const selectedMethod = document.getElementById('answerMethod').value;
+            const role = new URLSearchParams(window.location.search).get('role');
+            window.location.href = `/start_interview?answer_mode=${selectedMethod}&role=${role}`;
+        }
+    </script>
+</body>
+</html>
